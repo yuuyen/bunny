@@ -52,4 +52,56 @@
     @media (max-width: 767px) {
         display: none !important;
     }
+    a {
+        text-decoration: none;
+    }
+}
+
+.block-coint {
+    width: 294px;
+    height: 84px;
+    padding: 8px 16px 8px 16px;
+    border-radius: 16px;
+    border: 1px solid #FFFFFF0D;
+    bottom: 80px;
+    left: -60px;
+    background: #4740605E;
+
+    @media (max-width: 767px) {
+        bottom: -24px;
+        left: -0px;
+    }
+
+    &.block-price {
+        top: 160px;
+        right: -60px;
+        bottom: auto;
+        left: auto;
+
+        @media (max-width: 767px) {
+            top: -24px;
+            right: 0px;
+            bottom: auto;
+            left: auto;
+        }
+    }
+
+    .commmand {
+        width: 40px;
+        height: 20px;
+        border-radius: 4px;
+        font: 'Space Grotesk';
+    }
+
+    .commmand-sell {
+        background: #DC3768;
+    }
+
+    .commmand-buy {
+        background: #00CD88;
+    }
+
+    .coint-price {
+        color: #00CD88;
+    }
 }

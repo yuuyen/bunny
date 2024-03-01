@@ -1,36 +1,4 @@
-import React from "react";
-
-//import scss file in your componenet
-import "./styles.scss";
-
-import assetsLogo from './assets/client-logo.png';
-import securityIcon from './assets/security-icon.png';
-import protectIcon from './assets/protect-icon.png';
-import lifetimeIcon from './assets/lifetime-icon.png';
-import safetyIcon from './assets/safety-icon.png';
-import investIcon from './assets/invest-icon.png';
-import mainLogo from './assets/main-brainwave-hero-app.svg';
-
-import mailIcon from './assets/icon-mail.png';
-import flyIcon from './assets/icon-fly.png';
-import infoIcon from './assets/icon-info.png';
-
-
-import Tag from "./components/Tag";
-import { FlexBetween, FlexCenter, FlexColumn, FlexFullCenter } from "./components/Flex";
-import DivButton from "./components/DivButton";
-import ListTick from "./components/ListTick";
-import NavMenu from "./components/NavMenu";
-import Blog from "./pages/Blog";
-import BlogDetails from "./pages/BlogDetails";
-
-export default function App() {
-    return <Blog />
-    return (
-        <>
-            <NavMenu />
-
-            <div className="container position-relative">
+<div className="container position-relative">
                 <div className="title-logo"></div>
 
                 <div className="container-gap">
@@ -65,7 +33,7 @@ export default function App() {
                 <hr />
 
                 {/* The Best Arbitrage Platform That Offers Optimal Profit */}
-                <FlexBetween className="container-gap mx-auto gap-16 flex-md-row flex-column">
+                <FlexBetween className="container-gap mx-auto gap-16 md-flex-row">
                     <div className="d-flex flex-column col-sm-6 gap-16">
                         <Tag
                             tag="ABOUT GAMAX ALGORITHM"
@@ -101,30 +69,28 @@ export default function App() {
                         </div>
                         <div className="d-flex flex-column col-sm-4">
                             <div className="box py-2 px-4">
-                                <img src={protectIcon} width={150} height={150} />
-                                <div>
+                                <img src={securityIcon} width={150} height={150} />
                                 <h4 className="text-white">Protect the identity</h4>
                                 <div>Your identity is protected You are responsible for your profits</div>
-                                </div>
                             </div>
                         </div>
                         <div className="d-flex flex-column col-sm-4">
                             <div className="box py-2 px-4">
-                                <img src={lifetimeIcon} width={150} height={150} />
+                                <img src={securityIcon} width={150} height={150} />
                                 <h4 className="text-white">Lifetimetransaction</h4>
                                 <div>Transactions exist forever on the internet space</div>
                             </div>
                         </div>
                         <div className="d-flex flex-column col-sm-4">
                             <div className="box py-2 px-4">
-                                <img src={safetyIcon} width={150} height={150} />
+                                <img src={securityIcon} width={150} height={150} />
                                 <h4 className="text-white">Safety profit</h4>
                                 <div>Arbitrage trading is safe profit Balance and profit are secure</div>
                             </div>
                         </div>
                         <div className="d-flex flex-column col-sm-4">
                             <div className="box py-2 px-4">
-                                <img src={investIcon} width={150} height={150} />
+                                <img src={securityIcon} width={150} height={150} />
                                 <h4 className="text-white">Invest & Withdraw easily</h4>
                                 <div>Invest or Withdraw your balance easily through your wallet</div>
                             </div>
@@ -133,7 +99,7 @@ export default function App() {
                 </div>
 
                 {/* Read GamaX Documents */}
-                <FlexBetween className="container-gap mx-auto gap-16 flex-md-row flex-column">
+                <FlexBetween className="container-gap mx-auto gap-16">
                     <div className="col-sm-6 tag-paper-logo"></div>
 
                     <div className="d-flex flex-column col-sm-6 gap-16">
@@ -157,7 +123,7 @@ export default function App() {
                 </FlexBetween>
 
                 {/* Network Structure */}
-                <FlexBetween className="container-gap mx-auto gap-16 flex-md-row flex-column-reverse">
+                <FlexBetween className="container-gap mx-auto gap-16">
                     <div className="d-flex flex-column col-sm-6 gap-16">
                         <Tag
                             tag="DEVELOPER REVENUE STRUCTURE"
@@ -179,7 +145,7 @@ export default function App() {
                 </FlexBetween>
 
                 {/* Join & Earn Developer Network */}
-                <FlexBetween className="container-gap mx-auto gap-16 flex-md-row flex-column">
+                <FlexBetween className="container-gap mx-auto gap-16">
                     <div className="col-sm-6 tag-network-logo"></div>
                     <div className="d-flex flex-column col-sm-6 gap-16">
                         <Tag
@@ -203,7 +169,7 @@ export default function App() {
                 </FlexBetween>
 
                 {/* Join & Earn Developer Network */}
-                <FlexBetween className="container-gap mx-auto gap-16 flex-md-row flex-column-reverse">
+                <FlexBetween className="container-gap mx-auto gap-16">
                     <div className="d-flex flex-column col-sm-6 gap-16">
                         <Tag
                             tag="TOKEN OWNERSHIP"
@@ -236,9 +202,9 @@ export default function App() {
                         word2="BFi Exchange"
                     />
 
-                    <div className="d-flex flex-row flex-md-row flex-column">
+                    <div className="d-flex flex-row">
                         <div className="d-flex flex-column col-sm-6 gap-16">
-                            <div className="tag-trade tag-trade-left"></div>
+                            <div className="tag-trade-left"></div>
 
                             <ListTick
                                 listData={[
@@ -251,7 +217,7 @@ export default function App() {
                             />
                         </div>
                         <div className="d-flex flex-column col-sm-6 gap-16">
-                            <div className="tag-trade tag-trade-right"></div>
+                            <div className="tag-trade-right"></div>
 
                             <ListTick
                                 listData={[
@@ -279,7 +245,7 @@ export default function App() {
                         />
                     </FlexCenter>
 
-                    <div className="d-flex flex-row text-white gap-16 flex-md-row flex-column">
+                    <div className="d-flex flex-row text-white gap-16">
                         <FlexFullCenter className="tag-contact">
                             <FlexColumn className="align-items-center gap-16">
                                 <div className="social-icons"></div>
@@ -302,9 +268,9 @@ export default function App() {
 
                 {/* Footer */}
                 <div className="footer container-gap d-flex flex-column">
-                    <div className="d-flex align-items-md-center align-items-start col-12 mb-4 flex-md-row flex-column">
-                        <FlexFullCenter className="d-flex flex-column ml-2 col-6 text-white">
-                            <div className="d-flex flex-column gap-sm-12 gap-24">
+                    <div className="d-flex align-items-center col-12 mb-4">
+                        <FlexFullCenter className="d-flex flex-column col-6 text-white">
+                            <div className="d-flex flex-column gap-24">
                                 <div className="header-logo"></div>
                                 <div>A new way to make the investment easy, reliable and secure.</div>
                                 <div className="d-flex flex-row gap-16">
@@ -315,8 +281,8 @@ export default function App() {
                             </div>
                         </FlexFullCenter>
 
-                        <div className="d-flex flex-row justify-content-around col-sm-6 gap-24">
-                            <div className=" d-flex flex-column gap-16">
+                        <div className="d-flex flex-row col-sm-6 gap-24">
+                            <div className="col-sm-6 d-flex flex-column gap-16">
                                 <h2 className="font-size-18 text-white upper-case">
                                     Useful Links
                                 </h2>
@@ -365,6 +331,3 @@ export default function App() {
 
                 <div className="container-gap"></div>
             </div>
-        </>
-    );
-}

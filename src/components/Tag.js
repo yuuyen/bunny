@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 
 const Tag = ({ className, tagClassName, tag, word1, word2, word3 }) => {
-    const hasWord = word1 && word2 && word3;
+    const hasWord = word1 || word2 || word3;
     return (
         <div className={clsx('d-flex flex-column gap-12 tag', className)}>
             {tag &&

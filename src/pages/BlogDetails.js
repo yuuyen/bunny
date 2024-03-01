@@ -3,10 +3,6 @@ import React from "react";
 //import scss file in your componenet
 import "../styles.scss";
 
-import mailIcon from '../assets/icon-mail.png';
-import flyIcon from '../assets/icon-fly.png';
-import infoIcon from '../assets/icon-info.png';
-
 import chevIcon from '../assets/chevron-up-icon.png';
 
 import bnbIcon from '../assets/blog-bnb-icon.png';
@@ -14,14 +10,15 @@ import blogStep1 from '../assets/blog-step-1.png';
 import blogStep2 from '../assets/blog-step-2.png';
 import blogStep3 from '../assets/blog-step-3.png';
 
-import { FlexCenter, FlexColumn, FlexFullCenter } from "../components/Flex";
+import { FlexCenter, FlexColumn } from "../components/Flex";
 
 import NavMenu from "../components/NavMenu";
+import Footer from "../components/Footer";
 
 export default function BlogDetails() {
     return (
         <>
-            <NavMenu />
+            <NavMenu name="blog" />
 
             <div className="container position-relative">
                 <div className="container-gap">
@@ -87,72 +84,7 @@ export default function BlogDetails() {
                     </div>
                 </FlexCenter>
 
-                <hr className="container-gap" />
-
-                {/* Footer */}
-                <div className="footer container-gap d-flex flex-column">
-                    <div className="d-flex align-items-md-center align-items-start col-12 mb-4 flex-md-row flex-column">
-                        <FlexFullCenter className="d-flex flex-column ml-2 col-6 text-white">
-                            <div className="d-flex flex-column gap-sm-12 gap-24">
-                                <div className="header-logo"></div>
-                                <div>A new way to make the investment easy, reliable and secure.</div>
-                                <div className="d-flex flex-row gap-16">
-                                    <img src={mailIcon} width={44} height={44} />
-                                    <img src={flyIcon} width={44} height={44} />
-                                    <img src={infoIcon} width={44} height={44} />
-                                </div>
-                            </div>
-                        </FlexFullCenter>
-
-                        <div className="d-flex flex-row justify-content-around col-sm-6 gap-24">
-                            <div className=" d-flex flex-column gap-16">
-                                <h2 className="font-size-18 text-white upper-case">
-                                    Useful Links
-                                </h2>
-
-                                <div className="d-flex flex-column gap-12 font-size-16">
-                                    <a>
-                                        How it Works
-                                    </a>
-
-                                    <a>
-                                        Join to invest
-                                    </a>
-
-                                    <a>
-                                        Tokens Exchange
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div className="d-flex flex-column gap-16">
-                                <h2 className="font-size-18 text-white upper-case">
-                                    Community
-                                </h2>
-
-                                <div className="d-flex flex-column gap-12 font-size-16">
-                                    <a>
-                                        Help Center
-                                    </a>
-
-                                    <a>
-                                        Partners
-                                    </a>
-
-                                    <a>
-                                        Blog
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="copy-right text-center pt-4 font-size-16 text-white">
-                        © BUNNYBOT 2024, All Rights Reserved
-                    </div>
-                </div>
-
-                <div className="container-gap"></div>
+                <Footer />
             </div>
         </>
     );

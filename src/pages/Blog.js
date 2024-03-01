@@ -5,10 +5,6 @@ import "../styles.scss";
 
 import searchIcon from '../assets/search-icon.png';
 
-import mailIcon from '../assets/icon-mail.png';
-import flyIcon from '../assets/icon-fly.png';
-import infoIcon from '../assets/icon-info.png';
-
 import chevIcon from '../assets/chevron-up-icon.png';
 
 import bnbIcon from '../assets/blog-bnb-icon.png';
@@ -16,28 +12,50 @@ import binanceIcon from '../assets/blog-binance-icon.png';
 import metamaskIcon from '../assets/blog-metamask-icon.png';
 
 
-import { FlexBetween, FlexCenter, FlexColumn, FlexFullCenter } from "../components/Flex";
+import { FlexBetween, FlexCenter, FlexColumn } from "../components/Flex";
 
 import NavMenu from "../components/NavMenu";
 import Tag from "../components/Tag";
+import Footer from "../components/Footer";
 
 const menuLeftData = [
-    'TECHNISCHES PAPIER (7)',
-    'LEARN ABOUT GAMAX ALGORITHM (3)',
-    'OPEN WALLET & REGISTER (6)',
-    'INVESTMENT GUIDELINES (7)',
-    'CONNECT GAMAX ALGORITHM (8)',
-    'WITHDRAW TO WALLET (2)',
-    'CRYPTO KNOWLEDGE (4)',
-    'BFi TOKEN (3)',
-    'NOTIFICATIONS (3)',
-    'FAQS (4)'
+    {
+        title: 'TECHNISCHES PAPIER (7)',
+    },
+    {
+        title: 'LEARN ABOUT GAMAX ALGORITHM (3)',
+        link: './blog-details.html',
+    },
+    {
+        title: 'OPEN WALLET & REGISTER (6)',
+    },
+    {
+        title: 'INVESTMENT GUIDELINES (7)',
+    },
+    {
+        title: 'CONNECT GAMAX ALGORITHM (8)',
+    },
+    {
+        title: 'WITHDRAW TO WALLET (2)',
+    },
+    {
+        title: 'CRYPTO KNOWLEDGE (4)',
+    },
+    {
+        title: 'BFi TOKEN (3)',
+    },
+    {
+        title: 'NOTIFICATIONS (3)',
+    },
+    {
+        title: 'FAQS (4)',
+    }
 ]
 
 export default function Blog() {
     return (
         <>
-            <NavMenu />
+            <NavMenu name="blog" />
 
             <div className="container position-relative">
 
@@ -60,12 +78,12 @@ export default function Blog() {
 
                 <FlexBetween className="main-logo container-gap">
                     <FlexColumn className="blog-menu col-4">
-                        {menuLeftData.map((item, index) => {
-                            return <div key={index}
+                        {menuLeftData.map((item) => {
+                            return <div key={item.title}
                                 className="nav-memu-lelf d-flex flex-row font-size-14 font-weight-600"
                             >
                                 <div><img src={chevIcon} width={16} height={16} /></div>
-                                <div>{item}</div>
+                                <a href={item.link} >{item.title}</a>
                             </div>
                         })}
                     </FlexColumn>
@@ -103,72 +121,7 @@ export default function Blog() {
                     </div>
                 </FlexBetween>
 
-                <hr className="container-gap" />
-
-                {/* Footer */}
-                <div className="footer container-gap d-flex flex-column">
-                    <div className="d-flex align-items-md-center align-items-start col-12 mb-4 flex-md-row flex-column">
-                        <FlexFullCenter className="d-flex flex-column ml-2 col-6 text-white">
-                            <div className="d-flex flex-column gap-sm-12 gap-24">
-                                <div className="header-logo"></div>
-                                <div>A new way to make the investment easy, reliable and secure.</div>
-                                <div className="d-flex flex-row gap-16">
-                                    <img src={mailIcon} width={44} height={44} />
-                                    <img src={flyIcon} width={44} height={44} />
-                                    <img src={infoIcon} width={44} height={44} />
-                                </div>
-                            </div>
-                        </FlexFullCenter>
-
-                        <div className="d-flex flex-row justify-content-around col-sm-6 gap-24">
-                            <div className=" d-flex flex-column gap-16">
-                                <h2 className="font-size-18 text-white upper-case">
-                                    Useful Links
-                                </h2>
-
-                                <div className="d-flex flex-column gap-12 font-size-16">
-                                    <a>
-                                        How it Works
-                                    </a>
-
-                                    <a>
-                                        Join to invest
-                                    </a>
-
-                                    <a>
-                                        Tokens Exchange
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div className="d-flex flex-column gap-16">
-                                <h2 className="font-size-18 text-white upper-case">
-                                    Community
-                                </h2>
-
-                                <div className="d-flex flex-column gap-12 font-size-16">
-                                    <a>
-                                        Help Center
-                                    </a>
-
-                                    <a>
-                                        Partners
-                                    </a>
-
-                                    <a>
-                                        Blog
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="copy-right text-center pt-4 font-size-16 text-white">
-                        © BUNNYBOT 2024, All Rights Reserved
-                    </div>
-                </div>
-
-                <div className="container-gap"></div>
+                <Footer />
             </div>
         </>
     );
